@@ -1,0 +1,72 @@
+html{
+    height: 100%;
+}
+
+body{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: white;
+}
+
+.Main{
+   background-color: #05262965;
+}
+
+.Container{
+   display: flex;
+   width: 100%;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+}
+.Container2{
+   display: flex;
+   width: 100%;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+   background-image: url("../img/fondo3.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.noPM{
+   margin: 0%;
+   padding: 0%;
+}
+
+.Login{
+   background-color: rgba(99, 30, 93, 0.356);
+}
+
+.Signup{
+   background-color: purple;
+   width: 30%;
+}
+
+.submit{
+   
+   margin: 5em;
+   padding: 2em;
+}
+
+.Instruccion{
+   font-size: 3em;
+   padding-bottom: 0.5em;
+}
+
+.tm30{
+   width: 30%;
+}
+
+.w-{
+   font-size: 2.5em;
+}
+
+.ligth{
+   color: #a0a2a3;
+}
+
+
