@@ -10,7 +10,17 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <title>Dashboard</title>
+    <title>Eventos</title>
+    <style>
+        table td {
+            padding: 1rem;
+            background: #b5d2ff;
+        }
+
+        #tr-head td{
+            background: #538be0;
+        }
+    </style>
   </head>
   <body>
     <div class="menu" style="display: block; background: #393e46;">
@@ -22,11 +32,11 @@
         Dashboard
       </div>
       <a
-      class="m-add p-2 m-2"
-      style="display: inline-block; color: white; text-decoration: none;"
-      href=""
-      >Eventos</a
-    >
+        class="m-add p-2 m-2"
+        style="display: inline-block; color: white; text-decoration: none;"
+        href=""
+        >Eventos</a
+      >
       <a
         class="m-add p-2 m-2"
         style="display: inline-block; color: white; text-decoration: none;"
@@ -41,7 +51,46 @@
         Salir</a
       >
     </div>
-
+    <div class="container-events w-100 m-0">
+      <table class="w-100">
+        <tr id="tr-head">
+          <td>No.</td>
+          <td>Nombre</td>
+          <td>Descripcion</td>
+          <td>Fecha</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Evento 1</td>
+          <td>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
+            blanditiis cumque tenetur aspernatur excepturi quidem ullam,
+            reprehenderit
+          </td>
+          <td>26/11/2019</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Evento 2</td>
+          <td>
+            Amet consectetur adipisicing elit. Esse
+            blanditiis cumque tenetur aspernatur excepturi quidem ullam,
+            reprehenderit
+          </td>
+          <td>10/12/2019</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Evento 3</td>
+          <td>
+            Sit amet consectetur adipisicing elit. Esse
+            blanditiis cumque tenetur aspernatur excepturi quidem ullam,
+            reprehenderit
+          </td>
+          <td>10/12/2019</td>
+        </tr>
+      </table>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
