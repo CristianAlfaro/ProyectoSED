@@ -10,14 +10,15 @@
     <link rel="icon" href="/img/icon.ico">
 </head>
 
-<body class="signup">
+<body class="signup">   
     <div class="container">
         <div class="col-sm-6 mx-auto">
             <div class="card mt-5">
                 <div class="card-body">
                     <h1 class="text-center">
-                        <span class="fa fa-sign-up-alt"></span> sign up
+                        <span class="fa fa-sign-up-alt"></span> Nuevo Empleado
                     </h1>
+
                     <% if (message.length > 0){ %>
                     <div class="alert alert-danger">
                         <%= message %>
@@ -45,8 +46,8 @@
                     </form>
                     <hr>
                     <div class="text-center">
-                        <p>Already have an account?
-                            <a href="/">login</a>
+                        <p>Cancel?
+                            <a href="/home">Home</a>
                         </p>
                     </div>
                 </div>

@@ -40,11 +40,10 @@ module.exports = (app, passport) => {
 
     //SIGN UP
 
-    app.get('/signup', (req, res) => {
+    app.get('/signup', isLoggedInAdmin,(req, res) => {
         res.render('signup', {
             message: req.flash('signupMessage')
         });
-
     });
 
     app.post('/signup', passport.authenticate('local-signup', {
@@ -75,6 +74,13 @@ module.exports = (app, passport) => {
         return res.redirect('/');
     }
 
-
+    function isLoggedInAdmin(req, res, next) { 
+        if (req.isAuthenticated()) {
+            if(req.user.local.usuario == "RimuruTempest"){
+                return next();
+            }
+        }
+        return res.redirect('/');
+    }
     
 };

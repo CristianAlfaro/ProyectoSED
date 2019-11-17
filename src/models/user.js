@@ -10,9 +10,7 @@ const userSchema = new mongoose.Schema({
             unique: true,
             index: true
         },
-        friends: [String],
-        pending: [String],
-        waiting: [String]
+        admin: Boolean
     }
 });
 
