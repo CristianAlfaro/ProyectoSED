@@ -2,6 +2,7 @@ var multer = require('multer');
 var upload = multer({ dest: '../uploads/' });
 var path = require('path');
 var fs = require('fs');
+var server  = 'http://localhost:8010/';
     
 
 module.exports = (app, passport) => {
@@ -17,7 +18,7 @@ module.exports = (app, passport) => {
     });
     //
 
-    app.post('/', passport.authenticate('local-login', {
+    app.post(server + '/', passport.authenticate('local-login', {
         successRedirect: '/profile',
         failureRedirect: '/login',
         failureFlash: true
@@ -25,14 +26,14 @@ module.exports = (app, passport) => {
 
     //LOGIN
 
-    app.get('/login/', (req, res) => {
+    app.get(server + '/login/', (req, res) => {
         res.render('login', {
             message: req.flash('loginMessage')
         });
 
     });
 
-    app.post('/login', passport.authenticate('local-login', {
+    app.post(server + '/login', passport.authenticate('local-login', {
         successRedirect: '/home',
         failureRedirect: '/login',
         failureFlash: true
@@ -46,7 +47,7 @@ module.exports = (app, passport) => {
         });
     });
 
-    app.post('/signup', passport.authenticate('local-signup', {
+    app.post(server + '/signup', passport.authenticate('local-signup', {
         successRedirect: '/home',
         failureRedirect: '/signup',
         failureFlash: true
