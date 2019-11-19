@@ -77,7 +77,7 @@ module.exports = (app, passport) => {
 
     function isLoggedInAdmin(req, res, next) { 
         if (req.isAuthenticated()) {
-            if(req.user.local.usuario == "RimuruTempest"){
+            if(req.user.local.admin){
                 return next();
             }
         }
